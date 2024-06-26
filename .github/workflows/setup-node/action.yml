@@ -3,6 +3,16 @@ description: "Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependenci
 runs:
   using: "composite"
   steps:
+    - name: Install dependencies
+    run: |
+      if [ -e yarn.lock ]; then
+      yarn install --frozen-lockfile
+      elif [ -e package-lock.json ]; then
+      npm ci
+      else
+      npm i
+      fi
+      
     - name: Setup Node.js ⚙️
       uses: actions/setup-node@v4
       with:
