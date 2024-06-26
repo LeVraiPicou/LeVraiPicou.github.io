@@ -407,7 +407,7 @@ body:not(.user-is-tabbing) a:focus {
     background: linear-gradient( rgba(51, 51, 51, 0.82),
     rgba(121, 120, 120, 0.45)),
         url('./images/header.jpg');
-    height: 100vh;
+    height: 70vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -549,18 +549,9 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-.about__photo-container {
-    margin-bottom: var(--gutter-normal);
-}
-
 @media(min-width: 901px) {
     .about__text {
-        flex: 0 0 35%;
-    }
-    
-    .about__photo-container {
-        flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
+        font-size: larger;
     }
 }
 
